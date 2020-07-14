@@ -119,7 +119,7 @@ if __name__ == '__main__':
             turn_on(host, Mode.HEATING, 22)
         elif info['htemp'] >= 28:
             turn_on(host, Mode.COOLING, 26)
-        elif info['hhum'] >= 70:
+        elif info['htemp'] >= 25 and info['hhum'] >= 70:
             turn_on(host, Mode.DEHUMIDIFICATION, -1)
         sys.exit()
 
